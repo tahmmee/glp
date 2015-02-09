@@ -1,0 +1,21 @@
+<ion-view title="Glp Assistant" class="innerview">
+
+<ion-content>
+
+<div class="row" ng-repeat="i in [0,1,2]">
+	<div class="asset col" ng-repeat="j in accountsRow(i)">
+	 <span ng-if="j.active" ui-sref="app.accounts({assetid: j.id})">
+		<button class="button button-block button-calm button-large button-outline " >
+			<i class="icon ion-plus"></i>
+		</button>
+	</span>
+        <span ng-if="!j.active">
+			<button class="button button-block button-light button-large button-outline">
+			<span ng-if="j.amount" class="calm isactive">{{j.type}}</br>{{j.amount|currency}}</span>
+			</button></span>
+
+	</div>
+</div>
+
+</ion-content>
+</ion-view>

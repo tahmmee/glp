@@ -1,0 +1,22 @@
+<ion-view title="Glp Assistant" class="innerview">
+<ion-content>
+
+<div class="list">
+
+  <span ng-repeat="c in categories">
+
+  <a ng-if="c.qualified" class="item item-icon-left">
+    {{c.name}}
+    <i class="icon ion-checkmark balanced"></i>
+  </a>
+   <a ng-click="showErrors(c)" ng-if="!c.qualified" class="item item-icon-left item-icon-right">
+    <i class="icon ion-close assertive"></i>
+    {{c.name}}
+    <span class="badge badge-assertive">{{c.nerrs}}</span>
+  </a>
+  </span>
+
+</div>
+
+</ion-content>
+</ion-view>

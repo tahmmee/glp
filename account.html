@@ -1,0 +1,13 @@
+<ion-view title="Select Asset">
+<ion-modal-view>
+	<ion-content>
+    <div class="row"  ng-repeat="type in types">
+	 <div class="col col-offset-10 col-75" >
+
+	  		<button class="button button-calm button-block button-large button-outline icon-left" ng-click="showPopup(type)">
+  				{{type}}
+			</button>
+		</div>
+	</div>
+	</ion-content>
+</ion-view>
